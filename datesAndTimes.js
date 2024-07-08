@@ -29,3 +29,39 @@ d = Math.floor(Date.now() / 1000); // turn it into milliseconds
 
 let x;
 let dd = new Date(); // initializing date into dd variable
+x = dd.toString() // turns it into a string
+x = dd.getFullYear() // get year
+x = dd.getMonth() // get month its always gonna be 1 month behind, its index/0 based
+x = dd.getMonth() + 1; // this way to fix it
+
+x = dd.getDate(); // day of a month
+x = dd.getDay()  // day of a week
+
+x = dd.getHours() // get the hour military time
+x = dd.getMinutes() // get minutes in an hour
+x = dd.getSeconds();
+x = dd.getMilliseconds() // get miliseconds in a second
+
+// This way is usually the best when doing projects
+x = `${dd.getFullYear()}-${dd.getMonth() + 1}-${dd.getDate()}`;
+
+
+x = Intl.DateTimeFormat('en-US').format(dd); // date local
+x = Intl.DateTimeFormat('default').format(dd); // local date
+
+x = Intl.DateTimeFormat('default', {month: 'long'}).format(dd); // giving me current month: July
+x = dd.toLocaleString('default', {month: 'short'}) // same thing, giving month, with short instead of July, its Jul
+
+x = dd.toLocaleString('default', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    timeZone: 'America/Los_Angeles',
+}) // Monday July 8, 2024 at 4:45:08 PM
+// . That is a newer way of how to do it, and better
+
+console.log(x)

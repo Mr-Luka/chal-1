@@ -15,7 +15,7 @@ const myString = "developer";
 // console.log(finalWord)
 
 // Solution 3
-let myNewString;
+// let myNewString;
 
 // myNewString = myString.charAt(0).toUpperCase() + myString.substring(1);
 
@@ -25,5 +25,17 @@ let myNewString;
 // myNewString = myString[0].toUpperCase() + myString.substring(1);
 
 // Solution 5
-myNewString = `${myString[0].toUpperCase()}${myString.slice(1)}`;
-console.log(myNewString)
+// myNewString = `${myString[0].toUpperCase()}${myString.slice(1)}`;
+// console.log(myNewString)
+
+const x = Math.floor(Math.random() * 100 + 1);
+const y = Math.floor(Math.random() * 50 + 1);
+
+// Get the sum
+const sum = x + y;
+const output = `${x} + ${y} = ${sum}`;
+
+// Get the difference
+const diff = x - y;
+const diffOutput = `${x} - ${y} = ${diff}`;
+console.log(diffOutput)

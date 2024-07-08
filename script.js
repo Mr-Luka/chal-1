@@ -39,3 +39,18 @@ const output = `${x} + ${y} = ${sum}`;
 const diff = x - y;
 const diffOutput = `${x} - ${y} = ${diff}`;
 console.log(diffOutput)
+
+// Get the product
+const prod = x * y;
+const prodOutput = `${x} * ${y} = ${prod}`;
+console.log(prodOutput)
+
+// Get the quotient
+const quo = x / y;
+const quoOutput = `${x} / ${y} = ${quo}`;
+console.log(quoOutput)
+
+// Get the remainder
+const rm = x % y;
+const rmOutput = `${x} % ${y} = ${rm}`;
+console.log(rmOutput)

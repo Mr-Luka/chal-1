@@ -22,5 +22,8 @@ let myNewString;
 // console.log(myNewString)
 
 // Solution 4
-myNewString = myString[0].toUpperCase() + myString.substring(1);
+// myNewString = myString[0].toUpperCase() + myString.substring(1);
+
+// Solution 5
+myNewString = `${myString[0].toUpperCase()}${myString.slice(1)}`;
 console.log(myNewString)

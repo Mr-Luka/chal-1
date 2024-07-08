@@ -17,6 +17,10 @@ const myString = "developer";
 // Solution 3
 let myNewString;
 
-myNewString = myString.charAt(0).toUpperCase() + myString.substring(1);
+// myNewString = myString.charAt(0).toUpperCase() + myString.substring(1);
 
+// console.log(myNewString)
+
+// Solution 4
+myNewString = myString[0].toUpperCase() + myString.substring(1);
 console.log(myNewString)

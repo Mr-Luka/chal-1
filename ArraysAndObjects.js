@@ -69,7 +69,7 @@ const a = 'Hello';
 const b = 2;
 const c = 3;
 z = Array.of(a, b, c); // it will give us an array of the values of the variables ['Hello', 2, 3];
-console.log(z)
+// console.log(z)
 
 
 
@@ -79,5 +79,15 @@ const chal1 = [1, 2, 3, 4, 5];
 chal = chal1.unshift(0);
 chal = chal1.push(6);
 chal = chal1.reverse()
+// console.log(chal);
 
-console.log(chal);
+let chall;
+const chal2 = [1, 2, 3, 4, 5];
+const chal22 = [5, 6, 7, 8, 9, 10];
+// chall = chal2.pop();
+// chall = [...chal2, ...chal22];
+
+// chall = chal2.slice(0, 4).concat(chal22);
+chall = [...chal2, ...chal22];
+chall.splice(4, 1);
+console.log(chall)

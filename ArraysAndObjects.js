@@ -54,5 +54,21 @@ z = fruits.concat(berries); // merging two arrays into one single array that has
 // these two are the same
 z = [...fruits, ...berries] // Spread operator, used more with objects, but its also good for arrays
 
+// Flatten arrays
+const nestedArray = [1, 2, [3, 4], 5, [6, 7], 8]; // array with two nested arrays
+z = nestedArray.flat() //  flatened array, [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+// STATIC METHODS on array object 
+
+z = Array.isArray(fruits) // checking to see if its array, it will give True / False
+z = Array.from('12345'); // It takes a string and gives us an array [1, 2, 3, 4, 5]
+z = Array.from('Hello'); // ['H', 'e', 'l', 'l', 'o']
+
+const a = 'Hello';
+const b = 2;
+const c = 3;
+z = Array.of(a, b, c); // it will give us an array of the values of the variables ['Hello', 2, 3];
+
 
 console.log(z)

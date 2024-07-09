@@ -76,4 +76,36 @@ y = Object.entries(todo2) // It will give me an array of 3 arrays of entries
 // ['completed', false]
 
 y = todo2.hasOwnProperty('name'); // gives Boolean: true/ false
-console.log(y)
+// console.log(y)
+
+
+//  DESTRUCTURING & NAMING
+
+const firstName = 'John';
+const lastName = 'Doe';
+const age = 30;
+
+const person3 = {
+    firstName,
+    lastName,
+    age
+}
+// console.log(person3.age) // 30
+
+// Destructuring:
+const todo3 = {
+    id: 1,
+    title: 'Take out trash',
+    user: {
+        name: 'John'
+    }
+}
+//Destructure:
+//  const {id, title, user} = todo3; // 1 'Take out trash' {name: 'John}
+//  const {id, title, user: {name}} = todo3; // console.log( name ) - John
+const {
+    id: todoId,
+    title,
+    user: {name},
+} = todo3;
+//  console.log(todoId) // 1

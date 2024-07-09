@@ -90,4 +90,11 @@ const chal22 = [5, 6, 7, 8, 9, 10];
 // chall = chal2.slice(0, 4).concat(chal22);
 chall = [...chal2, ...chal22];
 chall.splice(4, 1);
-console.log(chall)
+// console.log(chall)
+
+// DESTRUCTURING ARRAY
+const numbers2 = [23, 67, 33, 49, 52];
+const [first, second] = numbers2; // It will give me frist two numbers: 23, 67
+
+const [one, two, ...rest] = numbers2; // 23, 67 [33, 49, 52]
+console.log(first, second, rest) 

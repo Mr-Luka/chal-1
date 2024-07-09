@@ -69,6 +69,15 @@ const a = 'Hello';
 const b = 2;
 const c = 3;
 z = Array.of(a, b, c); // it will give us an array of the values of the variables ['Hello', 2, 3];
-
-
 console.log(z)
+
+
+
+//  ARRAY CHALLENGES
+let chal
+const chal1 = [1, 2, 3, 4, 5];
+chal = chal1.unshift(0);
+chal = chal1.push(6);
+chal = chal1.reverse()
+
+console.log(chal);

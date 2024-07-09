@@ -51,7 +51,29 @@ const person2 = {
 y = person2.address.coords.lat; // 42.9384
 const obj1 = {a: 1, b: 2};
 const obj2 = {c: 3, d: 4};
-const obj3 = {obj1, obj2};
-y = obj3 // Gives an object with 2 objects inside obj1 and obj2
+const obj3 = {obj1, obj2};  // Gives an object with 2 objects inside obj1 and obj2
+y = obj3 
 y = {...obj1, ...obj2} // Object with all the keys and properties {a:1, b:2, c:3, d:4}
+
+const todos = [
+    {id: 1, name: 'Buy Milk'},
+    {id: 2, name: 'Pickup kids from school'},
+    {id: 3, name: 'Take out trash'},
+];
+y = todos // [{id:1...}{}{}]
+y = todos[0] // {id:1, name:'Buy Milk'}
+y = todos[0].name; // Buy Milk
+
+y = Object.keys(todo2) // It gives me an array with keys ['id', 'name', 'completed']
+y = todo2.length; // UNDEFINED
+y = Object.keys(todo2).length;  // it will give me 3
+
+y = Object.values(todo2); // it will give me an array with values [1, 'Lala', false]
+
+y = Object.entries(todo2) // It will give me an array of 3 arrays of entries
+// ['id', 1]
+// ['name', 'Lala']
+// ['completed', false]
+
+y = todo2.hasOwnProperty('name'); // gives Boolean: true/ false
 console.log(y)

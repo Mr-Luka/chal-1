@@ -11,26 +11,47 @@ const person = {
     },
     hobbies: ['music', 'sports'],
 }
-
 x = person.name; // John Doe
 x = person['age']; // 30
 x = person.address.state; // MA
 x =person.hobbies[0] // Music
-
 person.name = 'Jane Doe'
 x = person.name // Jane Doe
 person['isAdmin'] = false; // isAdmin: false
-
 delete person.age;  // deleted age from a person
-
 person.hasChildren = true; // add property
 
 person.greet = function () {
     console.log(`Hello, my name is ${this.name}`);
 }
-person.greet()
-
+// person.greet() // Hello my name is Jane Doe
 x = person; 
+// console.log(x)
 
-
-console.log(x)
+// Nested OBJECTS, object spread & Methods
+let y;
+const todo = {};
+todo.id = 1
+y = todo;
+// OR
+const todo2 = new Object();
+todo2.id = 1
+todo2.name = 'Lala';
+todo2.completed = false;
+y = todo2 // {id:1, name:'Lala', completed: false};
+// --------------
+const person2 = {
+    address: {
+        coords: {
+            lat: 42.9384,
+            lng: -71.3232
+        }
+    }
+}
+y = person2.address.coords.lat; // 42.9384
+const obj1 = {a: 1, b: 2};
+const obj2 = {c: 3, d: 4};
+const obj3 = {obj1, obj2};
+y = obj3 // Gives an object with 2 objects inside obj1 and obj2
+y = {...obj1, ...obj2} // Object with all the keys and properties {a:1, b:2, c:3, d:4}
+console.log(y)

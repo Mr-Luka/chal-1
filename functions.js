@@ -97,7 +97,7 @@ if(true) {
 }
 
 for(let i = 0; i <= 10; i++) {
-    console.log(i) // 0 and then 1 then 2, 3, 4, 5, 6, 7, 8, 9, 10
+    // console.log(i) // 0 and then 1 then 2, 3, 4, 5, 6, 7, 8, 9, 10
 }
 // console.log(i) // error, i is not defined, because its only inside the block, not global
 if(true) {
@@ -112,3 +112,24 @@ if(true) {
 
 
 // *****        Nested Scope        *****
+
+function first () {
+    const x = 100;
+
+    function second () {
+        const y = 200;
+        console.log( x + y) // in order for function Second to run, i have to run it outside, but inside first
+    } // I can access from the variables from a parent scope, but not the other way around in a parent to acces childs scope/ variable
+    second()
+}
+first();
+
+if(true) {
+    const x = 100;
+
+    if(x === 100) {
+        const y = 200;
+        console.log(x + y) // 300
+    }
+    // console.log(y) // error, i cant access y from a child
+}

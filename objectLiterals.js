@@ -149,4 +149,7 @@ library[2].status.read = true;
 const {
     title: firstBook,
 } = library[0];
-console.log(firstBook)
+// console.log(firstBook) // CEO
+
+const libJson = JSON.stringify(library);
+console.log(libJson)

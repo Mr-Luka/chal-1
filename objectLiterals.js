@@ -152,4 +152,4 @@ const {
 // console.log(firstBook) // CEO
 
 const libJson = JSON.stringify(library);
-console.log(libJson)
+// console.log(libJson)

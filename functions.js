@@ -65,3 +65,25 @@ getRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) // it will give a random number betwe
 // getRandom(1, 2, 3, 4, 5, 6, 7, 8, 9, 10); // now it will give the random number as well
 // and why i didnt have to use array brackets, is because when I use spread operator ... in the parameter
 // it turns it automatically into an array
+
+
+// Global & Function Scope
+
+const x = 100;
+console.log(x, 'in global')
+function run() {
+    console.log(window.innerHeight);
+    console.log(x, 'in function')
+}
+run()
+if (true) {
+    console.log(x, 'in block')
+};
+
+function add() {
+    const y = 50; // function scoped, wont work outside of this function
+    const x = 1;
+    console.log(x + y) //x in this function overshadows the x thats outside this function 
+
+}
+add()

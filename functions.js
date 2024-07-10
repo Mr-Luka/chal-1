@@ -1,3 +1,16 @@
+// Parameters and Arguments
+// Rest Parameters
+// Objects as params
+// Arrays as params
+// Global & Function Scope
+// BLOCK GLOBAL SCOPE
+// Nested Scope
+// Function Declaration vs Function Expression
+// Arrow Functions
+// Immediately invoked Function Expression
+
+
+
 function sayHello(){
     console.log("Hello World");
 }
@@ -118,7 +131,7 @@ function first () {
 
     function second () {
         const y = 200;
-        console.log( x + y) // in order for function Second to run, i have to run it outside, but inside first
+        // console.log( x + y) // in order for function Second to run, i have to run it outside, but inside first
     } // I can access from the variables from a parent scope, but not the other way around in a parent to acces childs scope/ variable
     second()
 }
@@ -129,7 +142,7 @@ if(true) {
 
     if(x === 100) {
         const y = 200;
-        console.log(x + y) // 300
+        // console.log(x + y) // 300
     }
     // console.log(y) // error, i cant access y from a child
 }
@@ -139,7 +152,7 @@ if(true) {
 function addDollarSign(value) {
     return `$` + value;
 }
-console.log(addDollarSign(100)); // $100
+// console.log(addDollarSign(100)); // $100
 //If i move console.log() above the function declaration (hoising) it will work
 // and that is only for function declarations
 
@@ -147,7 +160,7 @@ console.log(addDollarSign(100)); // $100
 const addPlusSign = function (value) {
     return `+` + value;
 };
-console.log(addPlusSign(200)) // +200
+// console.log(addPlusSign(200)) // +200
 //If i move console.log above, it wouldnt work for function expression
 
 // *****        Arrow Functions
@@ -174,12 +187,42 @@ const double = a => a * 2;
 const createObj = () => ({
     name: 'Brad', 
 });
-console.log(createObj())  // {name: 'Brad'}
+// console.log(createObj())  // {name: 'Brad'}
 
 // high order of functions
 const numbers = [1, 2, 3, 4, 5];
 numbers.forEach(function(n){
-    console.log(n); // 1 then 2, 3, 4, 5
-})
+    // console.log(n); // 1 then 2, 3, 4, 5
+});
 // Arrow function in a callback
-numbers.forEach(n=> console.log(n)) // same thing 1 then 2, 3, 4, 5
+// numbers.forEach(n=> console.log(n)); // same thing 1 then 2, 3, 4, 5
+
+
+
+// *****        Immediately invoked Function Expression
+// Immediately invoked Function Expression is a JavaScript function that runs as soon as it is defined
+
+// Example:
+// If I create another JavaScript file, that can be another library that we are using or whatever, and link that js as well (now we have two linked)
+// and lets say in this script we have a global variable named USER.
+// and in the main script, if we want to have a variable called USER as well, and soon as
+// we run the main script, we will get an error saying that USER is already defined.
+// because it has been declared in a global scope of the other file, there are few ways to handle it
+
+
+(function (){
+    const user = 'John';
+    console.log(user); // John
+    const hello = () => console.log('Hello from the IIFE');
+    hello();
+})();
+// We will not get an error, and be able to use both user variables, because this function is not in a global scope
+// this function is in a local scope, and it is not accessible outside of this function
+// If I am to run: hello(), it will show an error, because hello is not defined, its scoped inside that IIFE, so 
+// I have to run in inside
+
+(function(name){
+    console.log('Hello ' + name); 
+})('Shawn') // Hello Shawn
+//those are anonymous functions, no name associated with them
+

@@ -133,3 +133,20 @@ if(true) {
     }
     // console.log(y) // error, i cant access y from a child
 }
+
+// *****        Function Declaration vs Function Expression
+// Function Declaration
+function addDollarSign(value) {
+    return `$` + value;
+}
+console.log(addDollarSign(100)); // $100
+//If i move console.log() above the function declaration (hoising) it will work
+// and that is only for function declarations
+
+// Function Expression
+const addPlusSign = function (value) {
+    return `+` + value;
+};
+console.log(addPlusSign(200)) // +200
+//If i move console.log above, it wouldnt work for function expression
+

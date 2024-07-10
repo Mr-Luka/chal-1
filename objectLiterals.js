@@ -111,3 +111,34 @@ const {
 //  console.log(todoId) // 1
 
 // OBJECT CHALLENGE
+
+const library = [
+    {
+      title: 'CEO', 
+      author: 'Luka', 
+      status: {
+        own: true,
+        reading: false,
+        read: false,
+        }
+    },
+    {
+      title: 'Home', 
+      author: 'Anastacia', 
+      status: {
+        own: true,
+        reading: false,
+        read: false,
+        }
+    },
+    {
+      title: 'Wealth', 
+      author: 'Maxia', 
+      status: {
+        own: true,
+        reading: false,
+        read: false,
+        }
+    }
+]
+// Set the read value for all of them to true, Set the values using dot notation.

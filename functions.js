@@ -1,21 +1,21 @@
 function sayHello(){
     console.log("Hello World");
 }
-sayHello();
+// sayHello();
 
 // and these are parameters
 function add(num1, num2) {
     console.log(num1 + num2);
 }
 // When you pass a value here, those are arguments
-add(5, 10);
+// add(5, 10);
 
 function subtract(num1, num2) {
     return num1 - num2;
 // The reason why we return something is becase we want to do something with that value
 }
 const result = subtract(10, 2);
-console.log(result, subtract(20, 5))
+// console.log(result, subtract(20, 5))
 
 
 
@@ -26,7 +26,7 @@ console.log(result, subtract(20, 5))
 function registerUser(user = 'Bot') {
     return user + ' is registered'
 }
-console.log(registerUser());
+// console.log(registerUser());
 
 // Rest Parameters
 // Rest Parameters accept any number of arguments
@@ -37,7 +37,7 @@ function sum(...numbers) { //I can use unlimited number of arguments and it will
     ]}
     return total;
 }
-console.log(sum(1, 2, 3));   // 6
+// console.log(sum(1, 2, 3));   // 6
 
 // Objects as params
 function loginUser(user) {
@@ -47,8 +47,21 @@ const user = {
     id: 1,
     name: 'John'
 };
-console.log(loginUser(user)) // The user John with the id of 1 is logged in
-console.log(loginUser({
-    id:2,
-    name: 'Sara'
-})) // The user Sara with the id of 2 is logged in
+// console.log(loginUser(user)) // The user John with the id of 1 is logged in
+// console.log(loginUser({
+//     id:2,
+//     name: 'Sara'
+// })) // The user Sara with the id of 2 is logged in
+
+// Arrays as params
+function getRandom(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length); // getting a random index
+
+    const item = arr[randomIndex];
+    console.log(item)
+}
+getRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) // it will give a random number between 1-10
+// if the (arr) parameter is like that, but if we use (...arr) then its:
+// getRandom(1, 2, 3, 4, 5, 6, 7, 8, 9, 10); // now it will give the random number as well
+// and why i didnt have to use array brackets, is because when I use spread operator ... in the parameter
+// it turns it automatically into an array

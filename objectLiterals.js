@@ -142,3 +142,7 @@ const library = [
     }
 ]
 // Set the read value for all of them to true, Set the values using dot notation.
+library[0].status.read = true;
+library[1].status.read = true;
+library[2].status.read = true;
+console.log(library)

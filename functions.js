@@ -8,6 +8,7 @@
 // Function Declaration vs Function Expression
 // Arrow Functions
 // Immediately invoked Function Expression
+// *** Function Challenges ***
 
 
 
@@ -225,4 +226,15 @@ numbers.forEach(function(n){
     console.log('Hello ' + name); 
 })('Shawn') // Hello Shawn
 //those are anonymous functions, no name associated with them
+// IIFE is a function that is invoked immediately, as soon as it is defined
 
+
+// *****        FUNCTION CHALLENGES
+// Challenge 1
+// function getCelsius(far) {
+//     return (far - 32) * 5 / 9;
+// }
+// console.log(getCelsius(32))
+
+const getCelsius = far => `The temperature is ${(far - 32) * 5/9}\xB0 C`;
+console.log(getCelsius(100)) // it is 37.7 degrees C

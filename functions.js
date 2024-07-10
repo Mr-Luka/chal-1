@@ -150,3 +150,36 @@ const addPlusSign = function (value) {
 console.log(addPlusSign(200)) // +200
 //If i move console.log above, it wouldnt work for function expression
 
+// *****        Arrow Functions
+
+// function add(a, b) {
+//     return a + b
+// }
+//Arrow function syntax
+const addd = (a, b) => {
+    return a + b;
+};
+// Implicit return arrow function, becasue we are not specifying the return keyword its jsut doing it
+const subtractT = (a, b)=> a - b;
+
+const double = a => a * 2;
+// console.log(double(10)); // 20
+
+// Returning an object
+// const createObj = () => {
+//     name: 'Brad';
+// };
+// console.log(createObj()) // it will return undefined
+// If i want to return an object:
+const createObj = () => ({
+    name: 'Brad', 
+});
+console.log(createObj())  // {name: 'Brad'}
+
+// high order of functions
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function(n){
+    console.log(n); // 1 then 2, 3, 4, 5
+})
+// Arrow function in a callback
+numbers.forEach(n=> console.log(n)) // same thing 1 then 2, 3, 4, 5

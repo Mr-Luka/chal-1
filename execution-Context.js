@@ -89,4 +89,46 @@ function getSum(n1, n2) {
 let sum1 = getSum(x, y); // 150
 let sum2 = getSum(10, 5); // 15
 
-console.log(sum1, sum2);
+// console.log(sum1, sum2);
+
+
+
+//          The CALL STACK
+
+/*
+When we run a function we know that it opens up a new function execution context
+it also gets added to something called the Call Stack.
+STACK is a data structure that operates in a very specific way: last in first out ( LIFO )
+meaning that the last thing to come on is the first thing to come off
+
+
+Frist one gets pushed, executed, then poped out, second, third
+*/
+// function first() {
+//     console.log("first...")
+// }
+// function second() {
+//     console.log("second...")
+// }
+// function third() {
+//     console.log("third...")
+// }
+// first();
+// second();
+// third();
+
+/* 
+This functions are a bit different
+*/
+function first() {
+    console.log("first...");
+    second();
+}
+function second() {
+    console.log("second...")
+    third()
+}
+function third() {
+    console.log("third...")
+}
+first();

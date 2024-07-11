@@ -8,14 +8,14 @@ There is a global execution context as well as a function execution context for 
 function invoked.
 */
 
-let x = 100;
-let y = 50;
-function getSum(n1, n2) {
-    let sum = n1 + n2;
-    return sum;
-}
-let sum1 = getSum(x, y);
-let sum2 = getSum(10, 5);
+// let x = 100;
+// let y = 50;
+// function getSum(n1, n2) {
+//     let sum = n1 + n2;
+//     return sum;
+// }
+// let sum1 = getSum(x, y); // 150
+// let sum2 = getSum(10, 5); // 15
 
 /* 
 Creation Phase:
@@ -50,7 +50,31 @@ All of this is good to know when debugging
 */
 
 
+// Execution Context in Action
 /* 
+In DevTools, next to console is: Sources, on the left side I can see my .js file, 
+and when I click any line, that will be the line where the code will stop running, good for debugging
 
-
+Lets say I press the line where x=100;
+when I refresh the page the debugger will pause on that line, 
+in the scope I will see that x and y are unavailable/undefined, It puts the variables in memory, and sets
+them as undefined/unavailable before the execution.
+Functions get stored in memory and the entire code in function gets stored in memory(that will be down in global beneath script in Scope)
+When I scroll down I will see the function getSum() stored in a memory there.
+on the left side of devTools, window next to scope, where is Play button, rotate, and Down arrow, 
+when I press that, debugger will go one down and I will see in Scope that x is not undefined anymore, 
+it will show x: 100; 
+That means I started the execution phase.
+When I press the down arrow again, y: 50     and it skips the function definition because there is nothing to execute
+and its coming down to  -let sum1-  line where the function is being invoked. When we invoke a function it creates a new 
+function execution context. 
 */
+
+let x = 100;
+let y = 50;
+function getSum(n1, n2) {
+    let sum = n1 + n2;
+    return sum;
+}
+let sum1 = getSum(x, y); // 150
+let sum2 = getSum(10, 5); // 15

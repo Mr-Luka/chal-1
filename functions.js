@@ -263,3 +263,14 @@ const minMax = arr => {
 console.log(minMax([1, 7, 10, 15, 22])) // {min: 1, max: 22}
 // once there is a spread operator, it turns inot an array when console log it
 
+
+// Challenge 3
+// Create an IIFE (immediately invoked function expression) that takes in the lenght
+// and width of a recrangle outputs it to the console in a message as soon as the page loads.
+
+((length, width) => {
+    const area = length * width;
+    const output = `The area of a rectangle with a length of ${length} and width of ${width} is ${area}`;
+    console.log(output);
+})(10, 5);
+// console.log(output); // this will not work, because the output is inside the IIFE

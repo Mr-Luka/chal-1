@@ -242,12 +242,24 @@ console.log(getCelsius(100)) // it is 37.7 degrees C
 
 // Create an arrow function called minMax() that takes an array of numbers and return an object
 // with the minimum and maximum numbers in array, expected result: {min: 1, max: 5}
-function minMax(arr) {
+// function minMax(arr) {
+//     const min = Math.min(...arr);
+//     const max = Math.max(...arr);
+//     return {
+//         min,
+//         max,
+//     }
+// }
+// console.log(minMax([1,2,31,4,5]));
+
+const minMax = arr => {
     const min = Math.min(...arr);
     const max = Math.max(...arr);
     return {
         min,
-        max,
+        max
     }
 }
-console.log(minMax([1,2,31,4,5]));
+console.log(minMax([1, 7, 10, 15, 22])) // {min: 1, max: 22}
+// once there is a spread operator, it turns inot an array when console log it
+

@@ -1,4 +1,5 @@
 // Execution Context
+// The Call Stack
 
 /* Execution Context is when you run any JavaScript, a special environment is created to handle
 the transformation & execution of code. This is called the Execution context.
@@ -67,7 +68,16 @@ it will show x: 100;
 That means I started the execution phase.
 When I press the down arrow again, y: 50     and it skips the function definition because there is nothing to execute
 and its coming down to  -let sum1-  line where the function is being invoked. When we invoke a function it creates a new 
-function execution context. 
+function execution context. Now when I press down arrow again it will go to the:
+let sum = n1 + n2    line of code. Now I will see new area in Scope, which is called: LOCAL
+Local area is where out function execution context is and show that n1: 100 and n2: 50, contains 150
+because out first function call we passed in X and Y which are 150.
+When I click DOWN ARROW again, it will put 150 into sum, which is one code line bellow
+sum: 150.
+When I click DOWN ARROW again, it will go all the way down to: let sum2, which is being passed 10 and 5
+So its gonna open up a new execution context and go back into function with 10 and 5 as the arguments
+as the variables. When I click again, its going to add Sum, sum: 15
+When I click again, its going to go to the next line, which is Console.log and our script has been run
 */
 
 let x = 100;
@@ -78,3 +88,5 @@ function getSum(n1, n2) {
 }
 let sum1 = getSum(x, y); // 150
 let sum2 = getSum(10, 5); // 15
+
+console.log(sum1, sum2);

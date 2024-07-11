@@ -236,5 +236,18 @@ numbers.forEach(function(n){
 // }
 // console.log(getCelsius(32))
 
-const getCelsius = far => `The temperature is ${(far - 32) * 5/9}\xB0 C`;
+const getCelsius = far => `The temperature is ${(far - 32) * 5/9} \xB0C`;
 console.log(getCelsius(100)) // it is 37.7 degrees C
+
+
+// Create an arrow function called minMax() that takes an array of numbers and return an object
+// with the minimum and maximum numbers in array, expected result: {min: 1, max: 5}
+function minMax(arr) {
+    const min = Math.min(...arr);
+    const max = Math.max(...arr);
+    return {
+        min,
+        max,
+    }
+}
+console.log(minMax([1,2,31,4,5]));

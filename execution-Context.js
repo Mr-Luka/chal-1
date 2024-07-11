@@ -1,5 +1,6 @@
 // Execution Context
 // The Call Stack
+// Logic & Control Flow
 
 /* Execution Context is when you run any JavaScript, a special environment is created to handle
 the transformation & execution of code. This is called the Execution context.
@@ -138,3 +139,37 @@ function third() {
     console.log("third...")
 }
 first();
+
+
+
+// ***     Logic & Control Flow
+
+/*
+If statements
+One of the main ways to have control of the flow of your application is with If statements
+*/
+
+if(true) {
+    console.log("This is true")
+}
+if(false) {
+    console.log("This is NOT true")
+}
+
+const q = 10;
+const w = 5;
+
+if( q > w) {
+    console.log(`${q} is greater than ${w}`)
+}
+
+if( q === w) {
+    console.log(`${q} is equal than ${w}`) // this is false and it wont run
+} else {
+    console.log(`${q} is NOT equal than ${w}`)
+}
+
+if (q !== w) {
+    const z = 20;
+    console.log(`${z} is 20`)
+} // I cant log out z outside this IF block

@@ -118,7 +118,13 @@ Frist one gets pushed, executed, then poped out, second, third
 // third();
 
 /* 
-This functions are a bit different
+This functions are a bit different, what happens is:
+We are running first() in the global scope and then in first() we are running second() and
+in second() we are running third(). What happens is:
+We run first it gets pushed on while first is Running, second is run so that gets put
+on top of first becasue first is still running it's still open and then in second, third gets called
+so second is still running so third gets pushed on when third ends, third gets popped off
+and second ends gets popped off and first popped off.
 */
 function first() {
     console.log("first...");

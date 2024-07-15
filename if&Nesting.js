@@ -141,8 +141,25 @@ const kids = 0;
 //     console.log('Please enter number of children')
 // } // Please enter number of children. Why? because its 0 and that is falsy
 // The solution is
-if(kids !== undefined) {
+if(kids !== undefined) { // OR: (!isNan(children)) - I am saying here that children is not a number
      console.log(`You have ${kids} children`)
 } else {
      console.log('Please enter number of children')
-}
+}    // You have 0 children
+
+
+// Checking for empty arrays
+const posts = ['Post One', 'Post two'];
+if(posts) {
+    console.log('List Posts');
+} else {
+    console.log('No Posts');
+} // List Posts
+
+const posts2 = []; // Truthy
+if(posts2.length > 0) {
+    console.log('List Posts');
+} else {
+    console.log('No Posts to list');
+}  // No Posts to list
+// When I do console.log(posts.lenght) it will give me 1, therefore im fixing the truthty problem

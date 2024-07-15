@@ -38,3 +38,75 @@ if (hour === 6 || hour === 20) {  // || - or
     console.log('Brush your teeth')
 }
 
+
+// TRUTHY & FALSY VALUES
+/*
+If you have something you pass into an IF statement that's not something equal to or is something
+greater then maybe you had just have a string like an email.
+in this If statement I passed email, which is true, better say it was coerced to true, so anything
+you pass in an IF statement it will be coerced into a boolean (true/false).
+A string with ANYTHING IN IT is TRUTHY value, its always gonna result to true:
+
+const email = 'test@test.gmail.com';
+if(email) {
+    console.log('You passed in an email')
+}
+*/
+
+// FALSY VALUES:
+/*
+    false;
+    0
+    "" or '' (Empty String)
+    null
+    undefined
+    NaN (Not a Number)
+*/
+const x = false;
+console.log(Boolean(x)) // false
+// This is falsy:
+if (x) {
+    console.log('This is truthy');
+} else {
+    console.log('This is falsy');
+}
+
+const y = 0;
+// This is falsy:
+if (y) {
+    console.log('This is truthy');
+} else {
+    console.log('This is falsy');
+}
+
+const q = '';
+// This is falsy:
+if (q) {
+    console.log('This is truthy');
+} else {
+    console.log('This is falsy');
+}
+
+const w = null;
+// This is falsy:
+if (w) {
+    console.log('This is truthy');
+} else {
+    console.log('This is falsy');
+}
+
+const e = undefined;
+// This is falsy:
+if (e) {
+    console.log('This is truthy');
+} else {
+    console.log('This is falsy');
+}
+
+const r = NaN;
+// This is falsy:
+if (r) {
+    console.log('This is truthy');
+} else {
+    console.log('This is falsy');
+}

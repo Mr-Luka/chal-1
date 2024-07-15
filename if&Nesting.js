@@ -79,7 +79,8 @@ if (y) {
     console.log('This is falsy');
 }
 
-const q = '';
+const q = '';    // When building, and when something is subbmited as an empty string/ input
+// if will show as false
 // This is falsy:
 if (q) {
     console.log('This is truthy');

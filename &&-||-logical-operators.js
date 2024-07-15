@@ -1,3 +1,13 @@
+/*
+
+&&
+||
+LOGICAL ASSIGNMENT ||=
+
+*/
+
+
+
 // && 
 console.log(10 > 20 && 30 > 15 && 40 > 30); // false
 // When using &&, everything inside has to be true, to be true
@@ -74,3 +84,55 @@ c = 0 ?? 20;
 console.log(c) // 0
 // It returns 0 because on the left side its 0, which is falsy and not Null or undefined,
 // Its not looking for falsy, just Null or undefined
+
+
+
+//  LOGICAL ASSIGNMENT
+
+/*
+||=   Assign the right side value only if the left is a falsy value.
+
+
+&&=   Assign the right side value only if the left is a truthy value.
+
+
+??=    Assign the right side value only if the left is null or undefined.
+*/
+
+let d = false; // null, 0 (anythin falsy)
+if(!d) {
+    d = 10;
+} // 10
+// short version:
+d = d || 10; // 10
+//if d is falsy then set the right hand side
+//Event shorter is with using ||= assign operator
+d ||= 10;
+//so if I set anything falsy to d, wit ||= its gonna return 10, if I set it for example to 20,
+// its gonna be 20
+console.log(d)
+
+
+
+// &&= probably wont use this one as much
+let e = 10;
+if (e) {
+    e = 20;
+} // 20. Why? becasue e is truthy
+//short version:
+e = e && 20; // 20
+// even shorter:
+e &&= 20; // 20
+console.log(e) // i most probably wont use this
+
+
+
+// ??= Assign the right side value only if the left is null or undefined.
+let f = null;
+if(f === null || f === undefined){
+    f = 20;
+} // 20
+f = f ?? 20; // 20
+f ??= 20; // 20
+
+console.log(f);

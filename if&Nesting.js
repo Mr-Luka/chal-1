@@ -1,4 +1,5 @@
 // Else If & Nesting
+// Truthy & Falsy Values
 
 const d = new Date(10, 30, 2022, 6, 0, 0)  // Saturday January 12 1918 08:00
 const hour = d.getHours(); // 8

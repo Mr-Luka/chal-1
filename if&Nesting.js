@@ -61,6 +61,7 @@ if(email) {
     null
     undefined
     NaN (Not a Number)
+All of these are falsy, anything else will be truthy
 */
 const x = false;
 console.log(Boolean(x)) // false
@@ -110,4 +111,38 @@ if (r) {
     console.log('This is truthy');
 } else {
     console.log('This is falsy');
+}
+
+/*   Truthy Values:
+Everything else that is not falsy:
+
+true
+'0' (0 in a string)
+' ' (space in a string)
+'false' (false in a string)
+[] (an empty array)
+{} (an empty object)
+function(){} (an empty function)
+*/
+
+
+// TRUTHY and Falsy Caveats (warning)
+const children = 2;
+if(children) {
+    console.log(`You have ${children} children`)
+} else {
+    console.log('Please enter number of children')
+} // You have 2 children, or You have 1 children, but what if I put children = 0 ?
+
+const kids = 0;
+// if (kids) {
+//     console.log(`You have ${kids} children`)
+// } else {
+//     console.log('Please enter number of children')
+// } // Please enter number of children. Why? because its 0 and that is falsy
+// The solution is
+if(kids !== undefined) {
+     console.log(`You have ${kids} children`)
+} else {
+     console.log('Please enter number of children')
 }

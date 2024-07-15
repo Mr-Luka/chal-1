@@ -187,4 +187,11 @@ if (Object.keys(user2).length > 0) {
 } // No User
 
 
-// Loose Equality ()
+// Loose Equality (==)
+console.log(false == 0) // true
+console.log('' == 0) // true
+console.log(null == undefined) // true
+
+console.log(false === 0) // false
+console.log('' === 0) // false
+console.log(null === undefined) // false

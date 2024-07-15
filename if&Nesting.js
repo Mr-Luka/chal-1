@@ -163,3 +163,28 @@ if(posts2.length > 0) {
     console.log('No Posts to list');
 }  // No Posts to list
 // When I do console.log(posts.lenght) it will give me 1, therefore im fixing the truthty problem
+
+
+
+// Checking for empty Objects
+const user = {
+    name: 'Brad'
+}
+if(user) {
+    console.log('List User');
+} else {
+    console.log('No User');
+} // List User
+
+const user2 = {}; // Truthy
+console.log(Object.keys(user2)) // []
+// when using Object.keys on user2, we are turning it into an array, therefore I then can use
+// .length
+if (Object.keys(user2).length > 0) {
+    console.log('List User');
+} else {
+    console.log('No User');
+} // No User
+
+
+// Loose Equality ()

@@ -42,3 +42,35 @@ posts2.length > 0 && console.log(posts[0]) // it will properly log out empty, an
 
 // || - Will return the frist truthy value or the last value
 
+let b;
+b = 10 || 20
+console.log(b) // 10
+// It returns 10 becasue it will return the first truthy value, both of those are truthy, so it will return the first one
+
+b = 0 || 20; // 0 is falsy, 20 is truthy
+console.log(b) // 20
+// It returns 20, becasue 0 is falsy and 20 is the last value
+
+b = 0 || null || '' || undefined;
+console.log(b) // undefined
+// It returns undefined, becasue all of those are falsy, so it will return the last value
+
+
+//  ?? - Returns the right side operand when the left is null or undefined
+let c;
+c = 10 ?? 20;
+console.log(c) // 10
+// It returns 10 because on the left side there is no null or undefined
+
+c = null ?? 20;
+console.log(c) // 20
+// It returns 20 because on the left side its null
+
+c = undefined ?? 20;
+console.log(c) // 20
+// It returns 20 because on the left side its undefined
+
+c = 0 ?? 20;
+console.log(c) // 0
+// It returns 0 because on the left side its 0, which is falsy and not Null or undefined,
+// Its not looking for falsy, just Null or undefined

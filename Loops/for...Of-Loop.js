@@ -48,5 +48,28 @@ for (let user of users) {
 const str = 'Hello World';
 
 for (let letter of str) {
-    console.log(letter)
+    console.log(letter);
+  /* H
+     e
+     l
+     l
+     o
+
+     W
+     o
+     r
+     l
+     d
+  */
+}
+
+// Loop over Maps
+const map = new Map();
+map.set('name', 'John');
+map.set('age', 30);
+
+for (let [key, value] of map) {
+    console.log(key, value);
+    // name John
+    // age 30
 }

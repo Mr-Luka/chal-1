@@ -60,6 +60,7 @@ socials.forEach((social, index, arr)=> {
 */
 })
 
+
 // You can also pass named Function rather then an anonymous callback
 function logSocials(social) {
     console.log(social);
@@ -70,3 +71,29 @@ socials.forEach(logSocials);
     Facebook
     Instagram 
 */
+
+
+// .forEach() with objects
+const socialObjs = [
+    {name: 'Twitter', url: 'https://twitter.com'},
+    {name: 'LinkedIn', url: 'https://linkedin.com'},
+    {name: 'Facebook', url: 'https://facebook.com'},
+    {name: 'Instagram', url: 'https://instagram.com'},
+];
+
+socialObjs.forEach(item => {
+    console.log(item);
+/*
+    {name: 'Twitter', url: 'https://twitter.com'}
+    {name: 'LinkedIn', url: 'https://linkedin.com'}
+    {name: 'Facebook', url: 'https://facebook.com'}
+    {name: 'Instagram', url: 'https://instagram.com'}
+*/
+    console.log(item.url);
+/*
+    https://twitter.com
+    https://linkedin.com
+    https://facebook.com
+    https://instagram.com
+*/
+})

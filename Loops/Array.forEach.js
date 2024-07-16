@@ -59,3 +59,14 @@ socials.forEach((social, index, arr)=> {
 
 */
 })
+
+// You can also pass named Function rather then an anonymous callback
+function logSocials(social) {
+    console.log(social);
+}
+socials.forEach(logSocials);
+/*  Twitter
+    LinkedIn
+    Facebook
+    Instagram 
+*/

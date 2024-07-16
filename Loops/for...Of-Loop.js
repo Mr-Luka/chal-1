@@ -41,3 +41,12 @@ for (let user of users) {
     // Kate
     // Steve
 }
+
+
+// Loop over STRINGS
+
+const str = 'Hello World';
+
+for (let letter of str) {
+    console.log(letter)
+}

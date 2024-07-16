@@ -30,3 +30,24 @@ for (let key in colorObj) {
 */
 }
 
+
+// Using for in Loop within the array
+const colorArr = ['red', 'green', 'blue', 'yellow'];
+
+for (let color in colorArr) {
+    console.log(color) // its giving us keys, which in this case they are numberic from 0-3
+/*  0
+    1
+    2
+    3
+*/
+}
+// to get the color from the array ( key)
+for (let key in colorArr) {
+    console.log(colorArr[key]) // getting the key from the array
+/*  red
+    green
+    blue
+    yellow
+*/
+}

@@ -59,8 +59,8 @@ const cart = [
     {id: 3, name: 'Product 3', price: 175},
 ];
 // Get the total of the prices using .reduce().
-const total = cart.reduce( (acc, cur )=>  acc + cur.price, 0);
+const total = cart.reduce( (acc, product )=>  acc + product.price, 0);
 console.log(total) // 455
-// acc + cur.price, 0
+// acc + product.price, 0
 // accumulator which is the previous value, and we set it to 0, + current value of the price
 // 0 + 130 + 150 + 175 = 455

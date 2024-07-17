@@ -19,3 +19,23 @@ const sumWithInitial = array.reduce((previousValue, currentValue)=>
 previousValue + currentValue, initialValue);
 console.log(sumWithInitial); // 10
 // How? 0 + 1 + 2 + 3 + 4 = 10
+
+/*
+.reduce() takes in the function, like the rest of methods, and there are two arguments
+1) previousValue(accumulator) & 2) currentValue
+And you can pass on as an additional argument: initial value, which you can put as whatever
+you want, but its usually 0. Becasue for your first Loop through you are not going to have
+previous value so you can set that there.
+Initial value is not required
+*/
+// Longer version to understand better
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const sum = numbers.reduce(function (accumulator, currentValue){
+    return accumulator + currentValue
+}, 0) // I set 0 as initial value
+console.log(sum) // 55
+
+// Shorter:
+const sum2 = numbers.reduce((acc, cur)=> acc + cur, 0);
+console.log(sum2) // 55

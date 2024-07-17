@@ -73,3 +73,19 @@ console.log(companyYears);
 1: {name: 'Company Two', years: 16}
 2: {name: 'Company Three', years: 8} ...
 */
+
+
+// Chain .map() methods
+const squareAndDouble = numbers2
+.map(number => Math.sqrt(number)) // so wherever is here like this: Math.sqrt(number) will
+// always be put in this next .map() parameter
+.map(sqrt => sqrt * 2);
+console.log(squareAndDouble);
+/*
+(5) [2, 2.8284271247461903, 3.4641016151377544, 4, 4.47213595499958]
+0: 2
+1: 2.8284271247461903
+2: 3.4641016151377544
+3: 4
+4: 4.47213595499958
+*/

@@ -41,3 +41,18 @@ const companies2 = [
 // Create an array of company names
 const companyNames2 = companies2.map(company=> company.name);
 console.log(companyNames2);
+// ['Company One', 'Company Two', 'Company Three', 'Company Four', 'Company Five', 'Company Six', 'Company Seven', 'Company Eight', 'Company Nine']
+
+
+// Create an array with just company and category as objects
+const companyCategory = companies2.map(company => {
+    return {
+        name: company.name,
+        category: company.category,
+    }
+})
+console.log(companyCategory);
+
+// (9) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+// 0: {name: 'Company One', category: 'Finance'}
+// 1: {name: 'Company Two', category: 'Retail'} ....

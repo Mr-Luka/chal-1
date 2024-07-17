@@ -39,3 +39,28 @@ console.log(sum) // 55
 // Shorter:
 const sum2 = numbers.reduce((acc, cur)=> acc + cur, 0);
 console.log(sum2) // 55
+
+// Using a for loop for the same thing (which is little bit longer):
+const sum3 = () => {
+    let acc = 0;
+    for (let number of numbers) {
+    // acc = acc + number;
+    acc += number;
+    }
+    return acc;
+}
+console.log(sum3()) // 55
+
+
+// Realistic example with Shopping Cart
+const cart = [
+    {id: 1, name: 'Product 1', price: 130},
+    {id: 2, name: 'Product 2', price: 150},
+    {id: 3, name: 'Product 3', price: 175},
+];
+// Get the total of the prices using .reduce().
+const total = cart.reduce( (acc, cur )=>  acc + cur.price, 0);
+console.log(total) // 455
+// acc + cur.price, 0
+// accumulator which is the previous value, and we set it to 0, + current value of the price
+// 0 + 130 + 150 + 175 = 455

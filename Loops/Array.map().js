@@ -89,3 +89,11 @@ console.log(squareAndDouble);
 3: 4
 4: 4.47213595499958
 */
+
+// Chaining other methods 
+//You can chain .map() with other methods like .filter()
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const evenDouble = numbers.filter(number => number % 2 === 0)
+.map(number=> number * 2);
+
+console.log(evenDouble); // (5) [4, 8, 12, 16, 20]

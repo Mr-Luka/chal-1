@@ -42,8 +42,7 @@ const people = [
     },
 ];
 
-const youngPeople = people.filter(person=> {
-    return person.age <= 25})
+const youngPeople = people.filter(person=> person.age <= 25)
     .map(person => {
         return {
             name: `${person.firstName} ${person.lastName}`,
@@ -56,4 +55,24 @@ console.log(youngPeople);
 0: {name: 'Jane Poe', email: 'jane@gmail.com'}
 1: {name: 'Sara Soe', email: 'sara@gmail.com'}
 2: {name: 'Jose Koe', email: 'jose@gmail.com'}
+*/
+
+
+
+/*
+Challenge 2:
+Add all of the positive numbers in the array
+*/
+const numbers = [2, -30, 50, 20, -12, -9, 7];
+
+const positive = numbers.filter(number=> number > 0);
+console.log(positive);
+
+
+
+
+/*
+Challenge 3:
+Create a new array called capitalizeWords with the words from the words array with 
+the first letter of each word capitalized
 */

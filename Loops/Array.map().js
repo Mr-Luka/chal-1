@@ -56,3 +56,20 @@ console.log(companyCategory);
 // (9) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
 // 0: {name: 'Company One', category: 'Finance'}
 // 1: {name: 'Company Two', category: 'Retail'} ....
+
+
+
+// Create an array of objects with the name and the length of each company in years
+const companyYears = companies2.map(company => {
+    return {
+        name: company.name,
+        years: company.end - company.start,
+    }
+})
+console.log(companyYears);
+/*
+(9) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0: {name: 'Company One', years: 23}
+1: {name: 'Company Two', years: 16}
+2: {name: 'Company Three', years: 8} ...
+*/

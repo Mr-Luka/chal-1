@@ -2,4 +2,5 @@
 
 // document.body.innerHTML = '<h1>Hello World</h1>';
 
-document.write('Hello from JS')
+// document.write('Hello from JS')
+

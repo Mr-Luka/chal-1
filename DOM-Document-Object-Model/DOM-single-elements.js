@@ -39,3 +39,8 @@ secondItem.innerTet = 'Apple Juice';
 secondItem.style.color = 'red';
 
 
+// Use these methods on other elements
+const list = document.querySelector('ul');
+console.log(list) // <ul id='item-list' class='items'>...</ul>
+const firstItem = list.querySelector('li');
+firstItem.style.color = 'blue';

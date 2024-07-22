@@ -23,5 +23,19 @@ title.innerHTML = '<strong>ShoppingList</strong>'
 // Change styles
 title.style.color = 'red';
 title.style.backgroundColor = 'blue';
-title.style.padding = '10px'
-title.style.borderRadius = '10px'
+title.style.padding = '10px';
+title.style.borderRadius = '10px';
+
+
+// document.querySelector()
+console.log(document.querySelector('h1'));
+console.log(document.querySelector('#app-title'));
+console.log(document.querySelector('.container'));
+console.log(document.querySelector('input[type="text"]'));
+console.log(document.querySelector('li:nth-child(2)').innerText); // Orange Juice
+
+const secondItem = document.querySelector('li:nth-child(2)');
+secondItem.innerTet = 'Apple Juice';
+secondItem.style.color = 'red';
+
+

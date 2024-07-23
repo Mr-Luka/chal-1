@@ -13,5 +13,5 @@
  div.appendChild(text); // <div class='my-element' id='my-element' title='My Element'> Hello World </div>
  
 //  document.body.appendChild(div);  It will put it on the page, in a body section on the bottom of the page
-document.querySelector('ul').appendChild(div);
+document.querySelector('ul').appendChild(div); // Now its appended inside the UL, on the bottom of it
  console.log(div)

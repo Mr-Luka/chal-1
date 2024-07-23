@@ -36,4 +36,12 @@ output = child.parentElement; // <div class='parent'>...</div>
 child.parentElement.style.border = '1px solid #ccc';
 child.parentElement.style.padding = '10px';
 
+
+// Sibling Elements
+const secondItem = document.querySelector('.child:nth-child(2)'); // <div class='child'>Child Two</div>
+output = secondItem;
+output = secondItem.nextElementSibling; // <div class='child'>Child Three</div>
+
+secondItem.nextElementSibling.style.color = 'purple';
+secondItem.previousElementSibling.style.color = 'orange';
 console.log(output)

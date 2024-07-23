@@ -1,3 +1,5 @@
+// Ill probably rarely use this
+
 let output;
 
 const parent = document.querySelector('.parent');
@@ -40,4 +42,12 @@ output = child.parentElement; // <div class='parent'>...</div>
 
 child.parentNode.style.backgroundColor = '#ccc';
 child.parentNode.style.padding = '10px';
+
+
+// Siblings Nodes
+const secondItem = document.querySelector('.child:nth-child(2)');
+output = secondItem; // <div class='child'>Child 2</div>
+
+output = secondItem.nextSibling; // #text
+output = secondItem.previousSibling; // #text
 console.log(output)

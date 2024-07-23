@@ -31,4 +31,13 @@ output = parent.childNodes[5].style.color = 'red';
 output = parent.firstChild; // #text
 output = parent.lastChild;// #text
 parent.lastChild.textContent = 'Hello'
+
+
+// Parent Node
+const child = document.querySelector('.child');
+output = child.parentNode; // <div class='parent'>...</div>
+output = child.parentElement; // <div class='parent'>...</div>
+
+child.parentNode.style.backgroundColor = '#ccc';
+child.parentNode.style.padding = '10px';
 console.log(output)

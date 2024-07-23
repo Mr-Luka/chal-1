@@ -27,4 +27,8 @@ output = parent.childNodes[3].outerHTML; // <div class='child'><strong>Child 1</
 
 output = parent.childNodes[3].innerText = 'Child One'; // Child One
 output = parent.childNodes[5].style.color = 'red';
+
+output = parent.firstChild; // #text
+output = parent.lastChild;// #text
+parent.lastChild.textContent = 'Hello'
 console.log(output)

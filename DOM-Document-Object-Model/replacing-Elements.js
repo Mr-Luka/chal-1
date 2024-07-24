@@ -8,4 +8,13 @@ function replaceFirstItem() {
     firstItem.replaceWith(li);
 }
 
-replaceFirstItem()
+replaceFirstItem();
+
+
+
+// 
+function replaceSecondItem() {
+    const secondItem = document.querySelector('li:nth-child(2)');
+    secondItem.outerHTML = '<li>Replaced Second</li>';
+}
+replaceSecondItem();

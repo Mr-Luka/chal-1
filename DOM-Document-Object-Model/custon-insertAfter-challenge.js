@@ -13,7 +13,8 @@ const firstItem = document.querySelector('li:first-child');
 console.log(firstItem)
 
 function insertAfter1(newEl, existingEl) {
-    existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling)
+    existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling);
+
 }
 insertAfter1(li, firstItem);
 

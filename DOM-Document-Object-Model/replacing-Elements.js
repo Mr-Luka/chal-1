@@ -35,10 +35,18 @@ replaceSecondItem();
 // replaceAllItems();
 
 //Shorter:
+// function replaceAllItems() {
+//     const lis = document.querySelectorAll('li');
+//     lis.forEach((item, index)=> 
+//         index === 2 ? item.innerHTML = 'Second Item' 
+//         : item.innerHTML = 'Replace All' )
+// }
+// replaceAllItems();
+
+
+// Or even SHORTER
 function replaceAllItems() {
     const lis = document.querySelectorAll('li');
-    lis.forEach((item, index)=> 
-        index === 2 ? item.innerHTML = 'Second Item' 
-        : item.innerHTML = 'Replace All' )
-}
+    lis.forEach((item, index)=> item.innerHTML = index === 1 ? 'Second Item' : 'Item');
+};
 replaceAllItems();

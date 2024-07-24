@@ -40,7 +40,14 @@ function insertBefore() {
     ul.insertBefore(li, thirdItem);
 }
 
+// insertBefore(newNode, referenceNode)
+/*
+The insertBefore() method of the Node interface inserts a node before a reference node as a child of a specified parent node.
 
+If the given node already exists in the document, insertBefore() moves it from its current position to the new position.
+(That is, it will automatically be removed from its existing parent before appending it to the specified new parent.)
+This means that a node cannot be in two locations of the document simultaneously.
+*/
 
 
 insertElement();

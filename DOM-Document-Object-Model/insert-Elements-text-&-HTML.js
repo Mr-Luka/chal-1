@@ -20,6 +20,11 @@ function insertText() {
 
 // HTML
 // insertAdjacentHTML Example
+function insertHTML() {
+    const clearBtn = document.querySelector('#clear');
+
+    clearBtn.insertAdjacentHTML('beforeend', '<h2>insertAdjacentHTML</h2>');
+}
 
 
 
@@ -28,6 +33,7 @@ function insertText() {
 
 insertElement();
 insertText();
+insertHTML();
 /*
 <!-- beforebegin -->
 <p>

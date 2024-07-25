@@ -32,7 +32,7 @@ function removeItem(itemNumber) {
     const li = document.querySelector(`li:nth-child(${itemNumber})`);
     ul.removeChild(li);
 }
-removeItem(2);
+// removeItem(2);
 
 
 // instead of li:nth-child(${itemNumber}), we can do [itemNumber - 1]
@@ -42,4 +42,17 @@ function removeItem2(itemNumber){
 
     ul.removeChild(li)
 }
-removeItem2(1)
+// removeItem2(1);
+
+
+// querySelectorAll
+function removeItem3(itemNumber) {
+    const li = document.querySelectorAll('li');
+    li[itemNumber - 1].remove();
+}
+// removeItem3(2);
+
+
+// shorter version
+const removeItem4 = itemNumber => document.querySelectorAll('li')[itemNumber - 1].remove();
+removeItem4(2);

@@ -22,4 +22,24 @@ function removeFirstItem() {
 
     ul.removeChild(li);
 }
-removeFirstItem();
+// removeFirstItem(); // it removed first listed item: Apples
+
+
+
+// remove child based on index number
+function removeItem(itemNumber) {
+    const ul = document.querySelector('ul');
+    const li = document.querySelector(`li:nth-child(${itemNumber})`);
+    ul.removeChild(li);
+}
+removeItem(2);
+
+
+// instead of li:nth-child(${itemNumber}), we can do [itemNumber - 1]
+function removeItem2(itemNumber){
+    const ul = document.querySelector('ul');
+    const li = document.querySelectorAll('li')[itemNumber - 1]; // index number
+
+    ul.removeChild(li)
+}
+removeItem2(1)

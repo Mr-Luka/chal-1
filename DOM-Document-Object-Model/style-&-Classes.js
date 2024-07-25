@@ -33,7 +33,6 @@ function run() {
             item.style.color = 'blue';
         }
     })
-
 }
 
 document.querySelector('button').onclick = run;

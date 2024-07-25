@@ -35,5 +35,11 @@ function onClear(){
 // function removeLi(){
 //     document.querySelectorAll('.item').forEach(li=>li.remove())
 // }
-
 // clearBtn.addEventListener('click', removeLi);
+
+
+// function onClear () {
+//     const itemList = document.querySelector('ul');
+//     itemList.innerHTML = '';
+// }
+// clearBtn.addEventListener('click', onClear);

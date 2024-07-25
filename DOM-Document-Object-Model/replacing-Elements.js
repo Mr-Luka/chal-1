@@ -1,4 +1,5 @@
 // .replaceWith()
+// .replace()
 function replaceFirstItem() {
     const firstItem = document.querySelector('li:first-child');
 
@@ -50,3 +51,21 @@ function replaceAllItems() {
     lis.forEach((item, index)=> item.innerHTML = index === 1 ? 'Second Item' : 'Item');
 };
 replaceAllItems();
+
+
+// .replace()
+/*
+In the HTML in the header, theres h1, that says Shopping List, lets say I want to replace that with 
+h2, so the way this works is we select the parent which is the header, we select the item we want to 
+replace and then we replace it with a new item
+*/
+function replaceChildHeading() {
+    const header = document.querySelector('header');
+    const h1 = header.querySelector('h1');
+
+    const h2 = document.createElement('h2');
+    h2.id = 'app-title';
+    h2.textContent = 'Shopping List';
+    header.replaceChild(h2, h1);
+}
+replaceChildHeading();

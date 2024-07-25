@@ -43,3 +43,24 @@ function onClear(){
 //     itemList.innerHTML = '';
 // }
 // clearBtn.addEventListener('click', onClear);
+
+
+
+// function onClear () {
+//     const itemList = document.querySelector('ul');
+//     const items = itemList.querySelectorAll('li')
+
+//     items.forEach(item=> item.remove())
+// }
+// clearBtn.addEventListener('click', onClear);
+
+
+function onClear () {
+    const itemList = document.querySelector('ul');
+    const items = itemList.querySelectorAll('li')
+
+    while(itemList.firstChild) {
+        itemList.removeChild(itemList.firstChild)
+    }
+}
+clearBtn.addEventListener('click', onClear);

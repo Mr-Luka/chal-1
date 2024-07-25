@@ -25,9 +25,15 @@ function onClear(){
 
 
 // Remove all the items from the shopping list
-function removeListItems() {
-    const listItems = document.querySelectorAll('.item');
-    listItems.forEach(item=> item.remove())
-}
+// function removeListItems() {
+//     const listItems = document.querySelectorAll('.item');
+//     listItems.forEach(item=> item.remove())
+// }
+// clearBtn.addEventListener("click", removeListItems);
 
-clearBtn.addEventListener("click", removeListItems);
+
+// function removeLi(){
+//     document.querySelectorAll('.item').forEach(li=>li.remove())
+// }
+
+// clearBtn.addEventListener('click', removeLi);

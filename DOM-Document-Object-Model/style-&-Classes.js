@@ -21,7 +21,18 @@ function run() {
     text.classList.toggle('dark'); // every time i click the button it 
     // toggles the dark and light class
 
+    // replace()
+    text.classList.replace('card', 'dark');
 
+    //change style
+    // itemList.style.lineHeight = '3';
+
+    items.forEach((item, index)=> {
+        item.style.color = 'red';
+        if (index === 2) {
+            item.style.color = 'blue';
+        }
+    })
 
 }
 

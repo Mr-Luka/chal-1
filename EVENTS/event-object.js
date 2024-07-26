@@ -29,6 +29,13 @@ function onClick2(e) {
 
     // console.log(e.offsetX);  - Horizontal from right to left - relative to where I click within to this element
     // console.log(e.offsetY);  -  Vertical from Top to Bottom - relative to where I click within to this element
+
+    // console.log(e.pageX);   -  The X position of the mouse click relative to the page
+    // console.log(e.pageY);   -  The y position of the mouse click relative to the page
+
+    // console.log(e.screenX);  //-  The X position of the mouse click relative to entire monitor
+    // console.log(e.screenY);  //-  The X position of the mouse click relative to entire monitor
+
 }
 
 

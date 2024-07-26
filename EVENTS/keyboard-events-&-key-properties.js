@@ -40,7 +40,24 @@ if(e.code === 'Digit1'){
     console.log('You pressed 1')
 }
 
+
+if(e.repeat) {
+    console.log('You are holding the key down' + e.key)
+// as long as I am pressing and holding the key I pressed it will be true and show it
 }
+
+console.log('Shift: ' + e.shiftKey) // when I press and hold Shift and another key/letter
+// Shift: true
+console.log('Control: ' + e.ctrlKey)
+console.log('Alt: ' + e.altKey)
+
+if(e.shiftKey && e.key === 'K'){
+    console.log('You hit shift + K')
+}
+
+}
+
+
 
 // itemInput.addEventListener('keypress', onKeyPress);
 // itemInput.addEventListener('keyup', onKeyUp);

@@ -5,20 +5,34 @@ function onClick (e){
     console.log(e.currentTarget) // <img src='../DOM-d...' alt=''>
     // e.target.style.backgroundColor = 'black'; // the background of logo turns black when clicked
 }
-logo.addEventListener("click", onClick)
+// logo.addEventListener("click", onClick)
 
 
 // Difference between e.target and e.currentTarget:
-document.body.addEventListener('click', function (e){
-    console.log(e.target); // <li class='item'>...</li>
-    console.log(e.currentTarget); // <body style='isolation: isolate;'>...</body>
+// document.body.addEventListener('click', function (e){
+//     console.log(e.target); // <li class='item'>...</li>
+//     console.log(e.currentTarget); // <body style='isolation: isolate;'>...</body>
 // Here I am getting two different things, because the Event is put onto the body
 // and that's what currentTarget is, it's whatever the event is attached to,
 // the Target is whever I clicked and in this case I clicked the <li>, which is in
 // the body, so basically what happens is events bubble up. If I click on the list item
 // that event bubbles up to the parent which would be the UL and then bubbles up to that parent
 // and that parent, all the way up to the body up to the HTML.
-})
+// });
+
+
+function onClick2(e) {
+    // console.log(e.type) - it will show: click, because that is the TYPE of a event, click.
+    // console.log(e.timeStamp);  -  gives a time stamp
+    // console.log(e.clientX);  -  Horizonatal from Right to Left - relative to the window
+    // console.log(e.clientY); -  Vertical from Top to Bottom - relative to the window
+
+    // console.log(e.offsetX);  - Horizontal from right to left - relative to where I click within to this element
+    // console.log(e.offsetY);  -  Vertical from Top to Bottom - relative to where I click within to this element
+}
+
+
+logo.addEventListener('click', onClick2);
 
 /*
 - `target` - The element that triggered the event

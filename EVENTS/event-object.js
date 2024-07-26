@@ -35,7 +35,6 @@ function onClick2(e) {
 
     // console.log(e.screenX);  //-  The X position of the mouse click relative to entire monitor
     // console.log(e.screenY);  //-  The X position of the mouse click relative to entire monitor
-
 }
 
 
@@ -56,3 +55,15 @@ logo.addEventListener('click', onClick2);
 - `screenX` - The X position of the mouse click relative to the screen
 - `screenY` - The Y position of the mouse click relative to the screen
 */
+
+
+
+// If you are working on forms, u need to use e.preventDefault() it prevents default behaviour
+
+function onDrag(e){
+    document.querySelector('h1').textContent = `X ${e.clientX} Y ${e.clientY}`;
+// When I click the logo and drag it, the shopping list will turn into X and Y
+// and It will display their numbers wherever i move the logo 
+}
+
+logo.addEventListener('drag', onDrag);

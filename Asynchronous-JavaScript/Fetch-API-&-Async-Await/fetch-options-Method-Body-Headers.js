@@ -26,3 +26,10 @@ function createPost({title, body}) {
 }
 
 createPost({title: 'My Post', body: 'This is my Post'})
+/*
+{title: 'My Post', body: 'This is my Post', id: 101}
+body: "This is my Post"
+id: 101
+title: "My Post"
+[[Prototype]]: Object
+*/

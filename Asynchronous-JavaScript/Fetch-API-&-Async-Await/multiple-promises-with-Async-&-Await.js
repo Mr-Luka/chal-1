@@ -54,6 +54,36 @@ async function getAllDataWithFetch () {
 
     const directorsRes = await fetch('./directors.json');
     const directors = await directorsRes.json();
+
     console.log(movies, actors, directors)
 }
-getAllDataWithFetch();
+// getAllDataWithFetch();
+
+
+async function getAllDataPromiseAll() { // [moviesRes, ... ] - destructuring
+    const [moviesRes, actorsRes, directorsRes] = await Promise.all([
+        fetch('./movies.json'),
+        fetch('./actors.json'),
+        fetch('./directors.json')
+    ]);
+
+    const movies = await moviesRes.json();
+    const actors = await actorsRes.json();
+    const directors = await directorsRes.json();
+
+    console.log(movies, actors, directors);
+}
+// getAllDataPromiseAll();
+
+
+
+// . Same example but with .then()
+async function getAllDataPromiseAll2() { // [moviesRes, ... ] - destructuring
+    const [movies, actors, directors] = await Promise.all([
+        fetch('./movies.json').then(res=>res.json()),
+        fetch('./actors.json').then(res=>res.json()),
+        fetch('./directors.json').then(res=>res.json())
+    ]);
+    console.log(movies, actors, directors)
+}
+getAllDataPromiseAll2();

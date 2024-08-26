@@ -29,3 +29,11 @@ ctx.strokeStyle = 'blue'
 ctx.fillText('Hello World', 300, 100, 300);
 ctx.strokeText('Hello World', 300, 500, 300);
 
+
+// Draw image
+const image = document.querySelector('img');
+image.style.display = 'none';
+
+image.addEventListener('load', ()=> {
+    ctx.drawImage(image, 250, 250, 100, 100);
+})

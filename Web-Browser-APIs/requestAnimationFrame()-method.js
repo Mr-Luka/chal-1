@@ -1,3 +1,4 @@
+const image = document.querySelector('img');
 let start;
 let done = false;
 
@@ -8,13 +9,13 @@ function step(timestamp){
 
     const elapsed = timestamp - start;
 
-    if(elapsed > 2000) {
+    if(elapsed > 5000) {
         done = true;
     }
     if(done) {
         return;
     }
-    console.log(elapsed)
+    image.style.transform = `translateX(${elapsed / 20}px) rotate(${elapsed / 10}deg)`
 
     requestAnimationFrame(step); // its gonna keep console loging
 }

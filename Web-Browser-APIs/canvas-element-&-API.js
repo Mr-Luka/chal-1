@@ -21,3 +21,11 @@ ctx.lineTo(300, 300); // end point will draw the line
 ctx.stroke() // for the line is stroke, not strokeStyle
 
 
+// Draw text
+ctx.font = '30px Arial';
+ctx.lineWidth = 1;
+ctx.fillStyle = 'blue';
+ctx.strokeStyle = 'blue'
+ctx.fillText('Hello World', 300, 100, 300);
+ctx.strokeText('Hello World', 300, 500, 300);
+

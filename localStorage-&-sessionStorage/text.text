@@ -1,7 +1,7 @@
 What is local storage / session Storage?
 
 Property on a Window interface that allows us to access a Storage object
-Data is sotred in the borwser
+Data is stored in the browser
 Data is stored as key/value pairs and values are strings (Can not store objects)
 
 localStorage and sessionStorage have the same API.

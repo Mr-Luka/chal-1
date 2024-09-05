@@ -7,12 +7,16 @@
     <title>Video API</title>
 </head>
 <body>
-    <video src="media-video/clouds.mp4" 
+    <video id="video" src="media-video/clouds.mp4" 
     width="900" 
     poster="media-video/cloudss.jpg"></video>
     <!-- when controls, it will show play, pause and the bar
     when autoplay, it will play automatically, only if muted is there as well,
     loop - is to loop the video -->
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="stop">Stop</button>
+    <div id="current-time"></div>
 <!-- 
         <video src="media-video/clouds.mp4" 
     width="900" 
@@ -21,6 +25,8 @@
     muted
     loop
     poster="media-video/cloudss.jpg"></video> -->
+
+
     <script src="video-api.js"></script>
 </body>
 </html>

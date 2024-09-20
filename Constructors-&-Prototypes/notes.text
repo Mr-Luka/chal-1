@@ -1,0 +1,33 @@
+OOP - Object Oriented Programing
+
+- What OOP is and it's principles
+- Object Literals
+- Constructor functions
+- Prototypes
+- Prototype chain & inheritance
+- Object.create()
+- call() method
+- Classes
+- inheritance / sub Classes- Static methods
+- Getters & Setters
+- Private properties
+- Flags & descriptors
+- Sealing & freezing
+
+
+
+*   Object Oriented Programing  - OOP   *
+OOP/ Object Oriented Programming is a programming paradigm or a way of thinking about
+and structuring code. It is a specific style to implement certain principles.
+There are other paradigms such as procedural, functional and logic.
+OOP is extremly common in many different languages.
+
+
+
+*    What is an Object?  *
+
+'Self-Contained' piece of code that is a collection of methods and properties.
+Objects are used as building blocks and can interact with one another.
+
+There are many ways to create objects in JS. We have object literals, constructor functions,
+classes, factories and more.

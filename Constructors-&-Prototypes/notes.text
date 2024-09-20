@@ -31,3 +31,40 @@ Objects are used as building blocks and can interact with one another.
 
 There are many ways to create objects in JS. We have object literals, constructor functions,
 classes, factories and more.
+
+Why use OOP ?
+- can make your code easier to read and understand
+- prevents spaghetti code
+- flexible and allows you to build comples applications
+- not always needed. OOP can be overkill for smaller projects. It's great for more complex
+projects, especially if working on a team
+
+*   Components of OOP  *
+- Constructor Functions (JS): Creates a blueprint for an object
+- Prototypes (JS): a way for objects to inherit properties and methods from one another
+- CLasses: Another way to create a blueprint. 'Syntactic Sugar' in JS, but part of many other languages
+- Instances: Objects are 'Instantiated' using the blueprind (Constructor or Class)
+
+- Creating multiple objects using classes
+
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    createProfile() {
+        ...
+    }
+    logout(){
+        ...
+    }
+}
+
+const user1 = new User('Brad', 'brad@gmail.com');
+user1.createProfile();
+
+const user2 = new User('John', 'john@gmail.com');
+user2.createProfile();
+
+const user3 = new User('Jen', 'jen@gmail.com');
+user3.createProfile();

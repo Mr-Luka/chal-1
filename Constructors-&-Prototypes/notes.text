@@ -68,3 +68,26 @@ user2.createProfile();
 
 const user3 = new User('Jen', 'jen@gmail.com');
 user3.createProfile();
+---------------------------------
+
+
+
+4 Basic Principles of OOP (Object Oriented Programing):
+
+1) ABSTRACTION
+Hiding all but the relevant parts of an object in order to reduce complexity and increase
+efficiency.
+For Example .fetch() or .addEventListener(), we have no clue how it works, We only know about 
+the moethods and parts that are relevant to what we are doing.
+
+2) ENCAPSULATION
+The process of wrapping up data and methods into a unit such as a class or a function.
+Encapsulation usually includes some kind of 'data hiding'.
+
+3) INHERITANCE
+The process of inheriting the properties and methods from a parent class or constructor.
+This is a way to reuse code and reduce redundancy.
+
+4) POLYMORPHISM
+The process of inheriting the properties and methods from a parent class or constructor.
+A way to reuse code, it also allows us to do away with long else statements or switch.

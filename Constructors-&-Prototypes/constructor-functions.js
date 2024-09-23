@@ -42,3 +42,11 @@ const rect2 = new Rectangle ('Rectangle 2', 20, 10);
 const rect3 = new Rectangle ('Rectangle 3', 30, 30);
 console.log(rect2.name, rect3.name);
 console.log(rect2.area(), rect3.area())
+
+/*
+So if we want to get the constructor of an instance of an object, we can do that with the 
+constructor methods.
+*/
+
+console.log(rect1.constructor); // showing me all methods on the constructor
+console.log(rect2 instanceof Rectangle) // true

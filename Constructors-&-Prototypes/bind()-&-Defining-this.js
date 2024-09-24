@@ -17,4 +17,26 @@ will allow us to set the value of this manually and it returns a new function wh
 is bound to whatever the value is that we pass in.
 One common case for this is when we have callback functions, because callback functions are just
 regular functions. 
+
+
+
+Common place to put my event listener when you are using classes is in the constructor, 
+because it runs automatically
 */
+
+
+class App {
+    constructor() {
+        this.serverName = 'localhost'
+
+        document.querySelector('button')
+        .addEventListener('click', this.getServerName.bind(this)); // localhost
+    }
+
+    getServerName() {
+        console.log(this.serverName);
+    }
+}
+
+const app = new App();
+// app.getServerName(); // Outputs: localhost

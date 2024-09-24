@@ -69,3 +69,37 @@ console.log(rect2.area()) // 1200
 Any object that I instantiate from this constructive function, I have access to all of these
 prototype methods
 */
+
+// These were the examples how to add prototypes to an object, 
+// alternate way to do that is with Object create
+
+const rectanglePrototypes = {
+    area: function () {
+     return this.width * this.height
+    },
+    perimeter: function () {
+        return 2 * (this.width + this.height);
+    },
+    isSquare: function () {
+        return this.height === this.width;
+    }
+}
+
+function createRectangle(height, width) {
+    return Object.create(rectanglePrototypes, {
+        height: {
+            value: height
+        },
+        width: {
+            value: width
+        }
+    })
+}
+
+const rectan = createRectangle(10, 20);
+console.log(rectan) // {height: 10, width: 20}
+console.log(rectan.area()) // 200
+console.log(rectan.isSquare()) // false
+
+const rectan2 = createRectangle(20, 20);
+console.log(rectan2.area()) // 400

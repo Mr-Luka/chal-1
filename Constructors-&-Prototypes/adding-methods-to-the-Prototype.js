@@ -72,7 +72,8 @@ prototype methods
 
 // These were the examples how to add prototypes to an object, 
 // alternate way to do that is with Object create
-
+// Object.create() takes in object of methods or an object of prototypes, and then object of your properties
+// then you will be able to use that to create new objects
 const rectanglePrototypes = {
     area: function () {
      return this.width * this.height

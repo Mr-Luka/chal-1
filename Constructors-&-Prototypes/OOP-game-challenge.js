@@ -8,3 +8,32 @@ and decrement the points by 10
 */
 
 
+function Player (name) {
+    this.name = name;
+    this.lvl = 1;
+    this.points = 0;
+}
+
+Player.prototype.gainXp = function(xp) {
+    this.points += xp;
+
+    if( this.points >= 10) {
+        this.lvl += 1;
+        this.points -= 10;
+    }
+}
+
+Player.prototype.describe = function () {
+    return `${this.name} is level ${this.lvl} with ${this.points} experience points`;
+}
+
+let player1 = new Player('Luka');
+let player2 = new Player('Bob');
+
+player1.gainXp(7);
+player1.gainXp(3);
+player2.gainXp(15);
+player2.gainXp(5);
+
+console.log(player1.describe());// Luka is level 2 with 0 experience points
+console.log(player2.describe()); // Bob is level 3 with 0 experience points

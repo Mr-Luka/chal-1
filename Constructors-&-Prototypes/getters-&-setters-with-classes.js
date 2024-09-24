@@ -36,3 +36,10 @@ person1.firstName = 'joe';
 person1.lastName = 'smith';
 console.log(person1.fullName); // Joe Smith
 console.log(person1)
+
+/*
+Get - getter is just a method, but we want to prefix it with the word get, so whatever I put
+in there, thats what im gonna put also in the console when loging out.
+Set - setter is just a method, but we want to prefix it with the word set, always gonna take
+in just one value as parameter that we wanna set it to ( value ) in this case.
+*/

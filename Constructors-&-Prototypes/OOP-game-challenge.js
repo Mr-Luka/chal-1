@@ -21,6 +21,8 @@ Player.prototype.gainXp = function(xp) {
         this.lvl += 1;
         this.points -= 10;
     }
+
+    console.log(this.describe()) // this automatically updates it, and hiding away describe
 }
 
 Player.prototype.describe = function () {
@@ -34,6 +36,7 @@ player1.gainXp(7);
 player1.gainXp(3);
 player2.gainXp(15);
 player2.gainXp(5);
+player1.gainXp(13);
 
-console.log(player1.describe());// Luka is level 2 with 0 experience points
-console.log(player2.describe()); // Bob is level 3 with 0 experience points
+// console.log(player1.describe());
+// console.log(player2.describe()); 

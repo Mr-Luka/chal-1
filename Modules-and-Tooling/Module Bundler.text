@@ -8,3 +8,6 @@ you are creating like a boiler plate dev environment that you can use for future
 
 (loaders - are used to proccess different type of files, and convert them into modules that can be 
 used by our application).
+
+making: webpack-starter
+in a folder inside

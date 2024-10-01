@@ -1,0 +1,16 @@
+What are Modules?
+Modules are pre-built, reusable pieces of code that can be easily integrated into a larger program.
+Modules are just JavaScript files that we can imoirt into other JavaScript files.
+We can export and import things like variables, functions and classes.
+We can also import 3rd-party packages from NPM (Node Package Manager).
+
+Why Use Modules & Tooling ?
+- Makes your code much more organized and easy to read/write by breaking it up into separate files.
+- Reusability
+- NPM packages
+- Optimization
+- Customized environment
+
+Types of Modules:
+- Common JS Modules - Commonly used by Node.js 
+- ES Modules (ESM, ES6 Modules) - Commonly used in the front-end

@@ -65,3 +65,19 @@ console.log(square.isSquare()) // true
 square.logArea() // Rectangle Area: 400
 // console.log(square);
 // console.log(Object.getPrototypeOf(square)) // {area:}
+
+
+/*
+A constructor is a special function that creates and initializes an object instance of a class. 
+In JavaScript, a constructor gets called when an object is created using the new keyword. 
+The purpose of a constructor is to create a new object and set values for any existing object 
+properties.
+
+Purpose: The constructor is called automatically when you create a new instance of the class using 
+the new keyword.
+Naming: It must be named constructor.
+Functionality: Inside the constructor, you can:
+Set initial values for the object's properties.
+Perform any necessary setup or initialization logic.
+Access the object being created using the this keyword.
+*/

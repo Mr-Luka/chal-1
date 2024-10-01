@@ -16,4 +16,14 @@ function capitalizeWords(str) {
 // then we want to turn it back into a string, becasue right now its an array with .join(' ') by the space
 }
 
-module.exports = capitalizeWords;
+function makeMoney(amount) {
+    return `$${amount}`
+}
+
+// module.exports = capitalizeWords; - single export
+
+//If I want to export multiple functions or whatever, then i have to put it in a object:
+module.exports = {
+    capitalizeWords,
+    makeMoney,
+}

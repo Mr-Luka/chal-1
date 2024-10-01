@@ -13,7 +13,15 @@ and it will pretty much console log it in there, and I can see the info I fetche
 
 
 // Common JS modules!
+// const capitalizeWords = require('./utils');
+// console.log(capitalizeWords('hello everyone'));
 
-const capitalizeWords = require('./utils');
+const { capitalizeWords, makeMoney} = require('./utils');
+const Person = require('./Person');
 
-console.log(capitalizeWords('hello everyone'));
+const person1 = new Person ('John', 30);
+person1.greet(); // Hello, my name is John and I am 30
+// So now I have access to that person class from the person module.
+
+
+console.log(makeMoney(100))

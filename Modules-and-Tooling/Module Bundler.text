@@ -1,0 +1,10 @@
+What is a Module Bundler?
+
+A module bundler is a tool that takes all of your source code, which is usually multiple files
+and bundles them together, often times into a single build file.
+
+using: webpack
+you are creating like a boiler plate dev environment that you can use for future projects.
+
+(loaders - are used to proccess different type of files, and convert them into modules that can be 
+used by our application).

@@ -13,4 +13,13 @@ Why Use Modules & Tooling ?
 
 Types of Modules:
 - Common JS Modules - Commonly used by Node.js 
-- ES Modules (ESM, ES6 Modules) - Commonly used in the front-end
+- ES Modules (ESM, ES6 Modules) - Commonly used in the front-end.
+
+
+What is Node.js ?
+Node is a JavaScript runtime environment. It allows JavaScript to run on the server, much like ant other
+language such as Python, Ruby, Java, etc.
+
+Node uses the V8 JS engine, which is the same engine that Chrome uses.
+The inner workings are similar to the borwser, since it uses the v8 engine.
+Obviously, there is no 'Window' or 'Document' in Node.

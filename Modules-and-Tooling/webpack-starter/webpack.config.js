@@ -8,6 +8,16 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'), // path that we are using for output is this 'dist' folder
         filename: 'bundle.js' // this is the name of the file that will be generated
     },
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist'),
+        },
+        port: 3000,
+        open: true,
+        hot: true,
+        compress: true,
+        historyApiFallback: true,
+    }, 
     module: {
         rules: [
             {

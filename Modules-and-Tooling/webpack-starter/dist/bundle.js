@@ -10,6 +10,26 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./message */ \"./src/message.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n\n\nconsole.log(_message__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n// we did then npm run buld in terminal,\n// that way in console log it didnt show an error anymore, because\n// it made main.js with bundled code\n\nvar hello = function hello() {\n  return console.log('Hello');\n};\n\n//# sourceURL=webpack://webpack-starter/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/message.js":
+/*!************************!*\
+  !*** ./src/message.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar message = {\n  id: 1,\n  text: 'Hello World'\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (message);\n\n//# sourceURL=webpack://webpack-starter/./src/message.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/css/style.css":
 /*!*****************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
@@ -107,26 +127,6 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 /***/ ((module) => {
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://webpack-starter/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./message */ \"./src/message.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n\n\n\nconsole.log(_message__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n\n// we did then npm run buld in terminal,\n// that way in console log it didnt show an error anymore, because\n// it made main.js with bundled code\n\n//# sourceURL=webpack://webpack-starter/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/message.js":
-/*!************************!*\
-  !*** ./src/message.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst message = {\n    id: 1,\n    text: 'Hello World'\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (message);\n\n//# sourceURL=webpack://webpack-starter/./src/message.js?");
 
 /***/ })
 

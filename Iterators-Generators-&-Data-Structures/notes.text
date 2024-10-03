@@ -1,0 +1,4 @@
+Symbols are a primitive data type (strings, numbers ...)
+Symbols are used to basically to create unique identifiers for objects (one of the reasons),
+they are always unique.
+

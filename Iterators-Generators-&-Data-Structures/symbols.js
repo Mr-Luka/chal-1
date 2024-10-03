@@ -35,3 +35,38 @@ for (let key in user) {
 // name
 // email
 // not getting a Symbol()
+
+// getOwnPropertySymbols
+console.log(Object.getOwnPropertySymbols(user)) // [Symbold(id)]
+// it will show only the Symbol(id)
+
+/* another way to create Symbols: 
+ Symbol.for()
+ This works little bit different, this is a function that takes a string as its parameter,
+ and it will search for existing Symbols that have that same string as it's description,
+ And if it finds one, it will return that symbol, and if not, it will create a new symbol
+ with that string as it's description.
+ These are esentially stored in what's called Global Symbol Registry.
+ So first it checks the registry before creating it.
+ example:
+*/
+const sym3 = Symbol.for('foo');
+const sym4 = Symbol.for('foo');
+console.log(sym3 === sym4); // true
+// const sym3 = Symbol('foo'); 
+// const sym4 = Symbol('foo');
+// console.log(sym3 === sym4); - false
+
+console.log(Symbol.keyFor(sym3)) // foo
+console.log(Symbol.keyFor(sym1)); // undefined -  because I did not create using Symbol.for()
+
+console.log(sym1.toString()) // it will give me a string variation: Symbol(foo)
+console.log(sym3.toString()) // same, Symbol(foo) - string
+console.log(sym.toString()) // Symbol()
+
+console.log(sym1.valueOf()) // gives me the actual Symbol- the actual value: Symbol(foo)
+console.log(sym3.valueOf()) // same: Symbol(foo)
+console.log(sym.valueOf()) // same: Symbol()
+
+// to see Built in symbols, and to see the list of those:
+console.log(Object.getOwnPropertyNames(Symbol))

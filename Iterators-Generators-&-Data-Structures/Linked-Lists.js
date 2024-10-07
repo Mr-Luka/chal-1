@@ -102,7 +102,26 @@ class LinkedList {
     }
 
     // Remove at index
+    removeAt(index) {
+        if(index > this._length) {
+            return;
+        }
+        let current = this._head;
+        let previous;
+        let count = 0;
 
+        if(index === 0) {
+            this._head = current.next;
+        } else {
+            while(count < index) {
+                count++;
+                previous = current;
+                current = current.next;
+            }
+            previous.next = current.next;
+        }
+        this._length--;
+    }
 
     // Print list data
     printListData() {
@@ -117,6 +136,10 @@ class LinkedList {
     }
     
     // Clear List
+    clearListData() {
+        this._head = null;
+        this._length = 0;
+    }
 }
 
 const list = new LinkedList();
@@ -129,8 +152,13 @@ list.insertLast(50); // _length 4, _head: Node next: _value 300
 list.insertAt(500, 2); // 300 200 500 100 50
 list.insertAt(600, 4); // 300 200 500 100 600 50
 
+list.removeAt(5) // 300 200 500 100 600
+
+// list.clearListData()
 list.printListData(); // 300 200 100 50
 // 300 is head and since we instertLast 50, thats the tail
 
 list.getAt(2); // 500
 list.getAt(0); // 300
+
+

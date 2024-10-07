@@ -10,3 +10,5 @@ test scripts that check if the code is doing what it's supposed to.
 Example: if you have a function that adds two numbers togeter, you would write a test that calls
 the function with numbers one, and two and checks to make sure that output is three.
 If the function passes the test, its working correctly.
+
+Good for debugging !

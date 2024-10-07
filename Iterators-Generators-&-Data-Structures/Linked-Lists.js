@@ -42,10 +42,24 @@ class LinkedList {
     }
 
     // Insert first node (Head)
-
+    insertFirst(value) {
+        const newNode = new Node(value);
+        newNode.next = this._head;
+        this._head = newNode;
+        this._length++
+    }
 
     // Insert last node (Tail)
+    insertLast(value) {
+        const newNode = new Node(value);
+        let current = this._head;
 
+        while(current.next) {
+            current = current.next;
+        }
+        current.next = newNode;
+        this._length++;
+    } 
 
     // Insert at index
 
@@ -63,5 +77,11 @@ class LinkedList {
 }
 
 const list = new LinkedList();
+
+list.insertFirst(100)// value 100
+list.insertFirst(200) // Head: value 200 since its inserted first
+list.insertFirst(300) // Head: value 300, next is 200 ... linked list
+
+list.insertLast(50);
 
 console.log(list)

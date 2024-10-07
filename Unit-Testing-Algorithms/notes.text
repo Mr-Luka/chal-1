@@ -2,3 +2,11 @@ Algorithms are used in computer programming to solve problems.
 An Algorithm is a set of instructions for accomplishing a task,
 usually you have an input or inputs, sets of inputs that you run through the 
 algorithm to get an expected output.
+
+What is unit testing ?
+Unit testing is a way of testing individual pieces of code called 'units'.
+And usually those units are functions and it's a method of testing where you write
+test scripts that check if the code is doing what it's supposed to.
+Example: if you have a function that adds two numbers togeter, you would write a test that calls
+the function with numbers one, and two and checks to make sure that output is three.
+If the function passes the test, its working correctly.

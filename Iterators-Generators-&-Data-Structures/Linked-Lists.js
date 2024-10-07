@@ -71,7 +71,16 @@ class LinkedList {
 
 
     // Print list data
+    printListData() {
+        let current = this._head;
+        let list = '';
 
+        while(current) {
+            list += current._value + ' ';
+            current = current.next;
+        } 
+        console.log(list);
+    }
     
     // Clear List
 }
@@ -82,6 +91,7 @@ list.insertFirst(100)// value 100
 list.insertFirst(200) // Head: value 200 since its inserted first
 list.insertFirst(300) // Head: value 300, next is 200 ... linked list
 
-list.insertLast(50);
+list.insertLast(50); // _length 4, _head: Node next: _value 300
 
-console.log(list)
+list.printListData(); // 300 200 100 50
+// 300 is head and since we instertLast 50, thats the tail

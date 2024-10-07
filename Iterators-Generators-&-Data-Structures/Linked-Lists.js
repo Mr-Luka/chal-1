@@ -88,7 +88,18 @@ class LinkedList {
     }
 
     // Get at Index
-
+    getAt(index) {
+        let current = this._head;
+        let count = 0;
+        while(current) {
+            if(count === index) {
+                console.log(current._value)
+            }
+            count++
+            current = current.next;
+        }
+        return null;
+    }
 
     // Remove at index
 
@@ -120,3 +131,6 @@ list.insertAt(600, 4); // 300 200 500 100 600 50
 
 list.printListData(); // 300 200 100 50
 // 300 is head and since we instertLast 50, thats the tail
+
+list.getAt(2); // 500
+list.getAt(0); // 300

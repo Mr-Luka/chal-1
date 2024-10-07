@@ -62,7 +62,30 @@ class LinkedList {
     } 
 
     // Insert at index
+    insertAt(value, index) {
+        if (index > this._length) {
+            return;
+        }
+        if (index === 0) {
+            this._insertFirst(value);
+            return;
+        }
 
+        const newNode = new Node(value);
+        let current, previous;
+        current = this._head;
+        let count = 0;
+
+        while(count < index) {
+            previous = current;
+            current = current.next;
+            count++;
+        }
+
+        newNode.next = current;
+        previous.next = newNode;
+        this._length++;
+    }
 
     // Get at Index
 
@@ -92,6 +115,8 @@ list.insertFirst(200) // Head: value 200 since its inserted first
 list.insertFirst(300) // Head: value 300, next is 200 ... linked list
 
 list.insertLast(50); // _length 4, _head: Node next: _value 300
+list.insertAt(500, 2); // 300 200 500 100 50
+list.insertAt(600, 4); // 300 200 500 100 600 50
 
 list.printListData(); // 300 200 100 50
 // 300 is head and since we instertLast 50, thats the tail

@@ -7,7 +7,7 @@ assert.deep, assert.deepEqual ...
 */
 
 const assert = require('assert');
-const chunk = require('./arraychink');
+const chunk = require('./arraychunk');
 
 describe('Array Chunking', ()=> {
     it('Should create chunks of a specific size', ()=> {

@@ -20,4 +20,4 @@ describe('Anagram', ()=> {
         expect(anagram('world', 'twirl')).toBeFalsy();
         expect(anagram('cost', 'lost')).toBeFalsy();
     })
-})
+});

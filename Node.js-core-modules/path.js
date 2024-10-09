@@ -32,3 +32,21 @@ console.log(dir); // subfolder/anotherfolder
 const myPath = path.join('subfolder', 'anotherfolder', 'index.js'); // this takes as many arguments
 // as you need, depending who many files u want 
 console.log(myPath) // subfolder/anotherfolder/index.js
+
+
+// resolve() - will create an aboslute path, and it takes in any number of arguments,
+// and joins them together
+const myPath2 = path.resolve('subfolder', 'anotherfolder', 'index.js');
+console.log(myPath2); ///Users/luka/Desktop/traversy/chal-1/Node.js-core-modules/subfolder/anotherfolder/index.js
+// resolve will give you the absolute path
+
+
+// __dirname 
+// enviroment variable. It tells you the absolute path of the directory containing the currently 
+// executing file, so the file that you are in 
+// whenever you are pointing to a file you are in , you should use __dirname instead of ./
+console.log(__dirname) // /Users/luka/Desktop/traversy/chal-1/Node.js-core-modules
+
+
+// __filename
+console.log(__filename) // /Users/luka/Desktop/traversy/chal-1/Node.js-core-modules/path.js

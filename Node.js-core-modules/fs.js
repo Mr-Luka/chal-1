@@ -91,3 +91,16 @@ async function renameFile(oldName, newName) {
     }
 }
 renameFile('file1.txt', 'file.txt') 
+
+
+// Create a folder 
+async function createFolder(folderName) {
+    try {
+        await fs.mkdir(folderName) // mkdir - same like in terminal, to make a file, this is a method
+        console.log(`Folder ${folderName} created`)
+    } catch(error) {
+        console.log(error)
+    }
+}
+createFolder('folder1')
+// node fs - in terminal to do make a folder, file, etc

@@ -1,0 +1,13 @@
+ Modules that I will cover here are the most common ones:
+
+ - fs - Work  with the file system. Manage files and folders
+ - path - Helpers for working with file paths
+ - os - Operating system information
+ - url - Parse and format URLs
+ - querystring - Helper for working with query strings from URLs
+ - http - Create server and listen for HTTP requests
+
+
+ FS moduel allows us to use node.js to work with the local file system.
+ so if we want to create a file, if we want to read from a file, create folders, move files around,
+ then we can use this module

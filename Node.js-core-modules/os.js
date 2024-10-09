@@ -53,4 +53,20 @@ console.log(`Free Memory: ${os.freemem() / 1024 / 1024 / 1024} GB`)
 
 // totalmem()
 console.log(os.totalmem())
-console.log(`Total Memory: ${os.totalmem() / 1024 / 1024 / 1024} GB`)
+console.log(`Total Memory: ${os.totalmem() / 1024 / 1024 / 1024} GB`);
+
+// homedir - home directory
+console.log(os.homedir()) // users/luka
+
+// uptime
+console.log(os.uptime())
+const uptime = os.uptime();
+const days = Math.floor(uptime / 60 / 60 / 24);
+const hours = Math.floor(uptime / 60 / 60) % 24;
+const minutes = Math.floor(uptime / 60) % 60;
+const seconds = Math.floor(uptime) % 60;
+console.log(`Uptime: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`);
+// Uptime: 11 days, 6 hours, 7 minutes, 50 seconds
+
+// hostname();
+console.log(os.hostname()) // Lukas-MBP.lan

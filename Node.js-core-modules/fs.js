@@ -50,5 +50,44 @@ async function createFile(filename, content) {
         console.log(error)
     }
 }
+// createFile('file4.txt', 'Hello World 4')
 
-createFile('file4.txt', 'Hello World 4')
+// Read from a File //
+async function readFile(filename) { // readFile is our name of the function
+    try {
+        const data = await fs.readFile(filename, 'utf8'); // readFile is also a method on the fs object
+        console.log(data);
+    } catch (error) {   
+        console.log(error)
+    }
+}
+
+readFile('file1.txt');
+readFile('file2.txt');
+readFile('file3.txt');
+readFile('file4.txt');
+
+
+// Delete a file // - method for that is unlink()
+async function deleteFile(filename) {
+    try {
+        await fs.unlink(filename);
+        console.log(`File ${filename} deleted`)
+    } catch(error) {
+        console.log(error)
+    }
+}
+
+deleteFile('file4.txt')
+
+
+// Rename a File
+async function renameFile(oldName, newName) {
+    try {
+        await fs.rename(oldName, newName) // rename() is a method on this object
+        console.log(`File ${oldName} renamed to ${newName}`)
+    } catch(error) {
+        console.log(error);
+    }
+}
+renameFile('file1.txt', 'file.txt') 
